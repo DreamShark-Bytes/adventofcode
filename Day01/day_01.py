@@ -1,12 +1,14 @@
 import os
 import logging
 # logging.basicConfig(level=logging.DEBUG)
+file_path = os.path.dirname(os.path.abspath(__file__)) + os.sep
+input_file = file_path + 'day_01_input.txt'
 
 def day_01_prb_1():
 	logging.info('day 1, problem 1')
 	max_user = 0
 	current_user = 0
-	with open('day_01_input.txt','r') as reader:
+	with open(input_file,'r') as reader:
 		data = reader.read().splitlines()
 		# data = reader.readlines()
 		for line in data:
@@ -23,7 +25,7 @@ def day_01_prb_2():
 	elf_calories = []
 	current_elf = 0
 	# Same input as Problem 1
-	with open('day_01_input.txt','r') as f:
+	with open(input_file,'r') as f:
 		data = f.read().splitlines()
 		for line in data:
 			if line:
@@ -38,4 +40,5 @@ def day_01_prb_2():
 	print(f'{sum(top_3)=}')
 
 if __name__ == '__main__':
-	day_01_prb_2()
+	day_01_prb_1() # Answer = 66719
+	day_01_prb_2() # Answer = 198551

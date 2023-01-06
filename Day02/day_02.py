@@ -1,13 +1,15 @@
 import os
 import logging
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.INFO)
+file_path = os.path.dirname(os.path.abspath(__file__)) + os.sep
+input_file = file_path + 'day_02_input.txt'
 
 def day_02_prb_1():
 	logging.info('day 2, problem 1')
 	score = 0
-	with open('day_02_input.txt','r') as f:
+	with open(input_file,'r') as f:
 		lines = f.readlines()
-		logging.info(f'{lines=}')
+		logging.debug(f'{lines=}')
 		for line in lines:
 			raw_move_elf, raw_move_me = line.split()
 			
@@ -15,7 +17,7 @@ def day_02_prb_1():
 			move_me = ['X','Y','Z'].index(raw_move_me)
 
 			pretty_moves = ['Rock','Paper','Scissors']
-			logging.info(f'My move: {pretty_moves[move_me]}, Elf Move: {pretty_moves[move_elf]}')
+			logging.debug(f'My move: {pretty_moves[move_me]}, Elf Move: {pretty_moves[move_elf]}')
 
 			# Shape Score
 			score += move_me + 1
@@ -25,21 +27,21 @@ def day_02_prb_1():
 			# 2 = Scissors
 			if move_elf == move_me:
 				score += 3
-				logging.info('\t TIE')
+				logging.debug('\t TIE')
 			elif move_me-move_elf == 1 or move_me-move_elf == -2: # win
 				score += 6
-				logging.info('\t WIN')
+				logging.debug('\t WIN')
 			else:
-				logging.info('\t LOSE')
+				logging.debug('\t LOSE')
 		
 	print(f'{score=}')
 
 def day_02_prb_2():
 	logging.info('day 2, problem 2')
 	score = 0
-	with open('day_02_input.txt','r') as f:
+	with open(input_file,'r') as f:
 		lines = f.readlines()
-		logging.info(f'{lines=}')
+		logging.debug(f'{lines=}')
 		for count, line in enumerate(lines):
 			raw_move_elf, raw_outcome = line.split()
 
@@ -60,10 +62,10 @@ def day_02_prb_2():
 				my_move = (move_elf - 1) % 3
 			shape_score = my_move + 1
 			score += shape_score + outcome_score
-			logging.info(f'Line {count}--- {raw_move_elf}={pretty_moves[move_elf]}, {raw_outcome}={pretty_outcome}({outcome_score}) with {pretty_moves[my_move]}({shape_score})')
+			logging.debug(f'Line {count}--- {raw_move_elf}={pretty_moves[move_elf]}, {raw_outcome}={pretty_outcome}({outcome_score}) with {pretty_moves[my_move]}({shape_score})')
 	print(f'{score=}')
 
 
 if __name__ == '__main__':
-	# day_02_prb_1()
-	day_02_prb_2()
+	day_02_prb_1() # Answer = 12645
+	day_02_prb_2() # Answer = 11756

@@ -3,6 +3,8 @@ import logging
 import json
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger('my-logger')
+file_path = os.path.dirname(os.path.abspath(__file__)) + os.sep
+input_file = file_path + 'day_07_input.txt'
 
 class item():
 	def __init__ (self, level, path, name, my_type, size , line = None):
@@ -82,7 +84,7 @@ def find_dir_sizes(tree, path=[]):
 	
 # Assuming that a 'cd' command ONLY opens an existing folders
 def day_07():	
-	with open('day_07_input.txt','r') as f:
+	with open(input_file,'r') as f:
 		data = f.read().splitlines()
 		# data = f.readlines()
 		
@@ -239,3 +241,5 @@ def day_07_prb_2(dir_tree):
 
 if __name__ == '__main__':
 	day_07()
+	# Problem 1 Answer = 1844187
+	# Problem 2 Answer = 4978279

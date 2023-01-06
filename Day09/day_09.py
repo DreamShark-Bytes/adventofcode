@@ -2,7 +2,10 @@ import os
 import json
 import copy
 import logging
+
 logging.basicConfig(level=logging.INFO)
+file_path = os.path.dirname(os.path.abspath(__file__)) + os.sep
+input_file = file_path + 'day_09_input.txt'
 
 class knot ():
 	# location = v, h 
@@ -47,7 +50,7 @@ def day_09_prb_1():
 	# How much of the world has the knots seen so far
 	grid_size = []
 	
-	with open('day_09_input.txt','r') as f:
+	with open(input_file,'r') as f:
 		data = f.read().splitlines()
 		
 		for line, command in enumerate(data):
@@ -171,7 +174,7 @@ def day_09_prb_2():
 	actions = []
 	total_mini_actions = 1 # knot history starts with default location: [0,0]
 	
-	with open('day_09_input.txt','r') as f:
+	with open(input_file,'r') as f:
 		data = f.read().splitlines()
 		
 		for line, command in enumerate(data):
@@ -259,5 +262,5 @@ def day_09_prb_2():
 	print(f'{len(unique_tail_history)=}')
 
 if __name__ == '__main__':
-	# day_09_prb_1()
-	day_09_prb_2()
+	day_09_prb_1() # Answer = 6266
+	day_09_prb_2() # Answer = 2369

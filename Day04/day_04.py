@@ -1,12 +1,14 @@
 import os
 import logging
 import re
-# logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.INFO)
+file_path = os.path.dirname(os.path.abspath(__file__)) + os.sep
+input_file = file_path + 'day_04_input.txt'
 
 def day_04_prb_1():
-	print('day 4, problem 1')
+	logging.info('day 4, problem 1')
 
-	with open('day_04_input.txt','r') as f:
+	with open(input_file,'r') as f:
 		pairings = f.readlines()
 	
 		encapsulations = []
@@ -22,14 +24,14 @@ def day_04_prb_1():
 				encapsulations.append(count)
 				encap = True
 			
-			logging.info(f'Line {count}--- {p1_start}-{p1_end},{p2_start}-{p2_end} :: {encap=}')
+			logging.debug(f'Line {count}--- {p1_start}-{p1_end},{p2_start}-{p2_end} :: {encap=}')
 			
 	print(f'\t{len(encapsulations)=}')
 
 def day_04_prb_2():
-	print(f'day 4, problem 2')
+	logging.info(f'day 4, problem 2')
 	
-	with open('day_04_input.txt','r') as f:
+	with open(input_file,'r') as f:
 		pairings = f.readlines()
 	
 		overlaps = []
@@ -45,11 +47,11 @@ def day_04_prb_2():
 				overlaps.append(count)
 				olap = True
 			
-			logging.info(f'Line {count}--- {p1_start}-{p1_end},{p2_start}-{p2_end} :: {olap=}')
+			logging.debug(f'Line {count}--- {p1_start}-{p1_end},{p2_start}-{p2_end} :: {olap=}')
 			
 	print(f'\t{len(overlaps)=}')
 
 
 if __name__ == '__main__':
-	day_04_prb_1()
-	day_04_prb_2()
+	day_04_prb_1() # Answer = 571
+	day_04_prb_2() # Answer = 917

@@ -2,6 +2,8 @@ import os
 import logging
 from math import prod
 logging.basicConfig(level=logging.INFO)
+file_path = os.path.dirname(os.path.abspath(__file__)) + os.sep
+input_file = file_path + 'day_08_input.txt'
 
 '''
 ASSUMPTIONS
@@ -15,7 +17,7 @@ def day_08_prb_1():
 	visible_tree_count = 0
 	visible_trees = []
 	
-	with open('day_08_input.txt','r') as f:
+	with open(input_file,'r') as f:
 		data = f.read().splitlines()
 		# data = f.readlines()[0]
 		
@@ -99,7 +101,7 @@ def day_08_prb_2():
 	cardinal_directions = ['Up', 'Left', 'Down', 'Right'] # match the problem description
 	
 	
-	with open('day_08_input.txt','r') as f:
+	with open(input_file,'r') as f:
 		data = f.read().splitlines()
 		
 		scenic_scores = [ [x, y, -1, [] ] for x in range(len(data))  for y in range(len(data[0])) ]
@@ -165,8 +167,8 @@ def day_08_prb_2():
 	print(scores[:10])
 	
 	scenic_scores.sort(key=lambda x: prod(x[3]),reverse=True)
-	logging.dbug(scenic_scores[:10])
+	logging.debug(scenic_scores[:10])
 
 if __name__ == '__main__':
-	# day_08_prb_1()
-	day_08_prb_2()
+	day_08_prb_1() # Answer = 1832
+	day_08_prb_2() # Answer = 157320

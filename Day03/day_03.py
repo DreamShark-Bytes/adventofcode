@@ -1,17 +1,19 @@
 import os
 import logging
 import string
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.INFO)
+file_path = os.path.dirname(os.path.abspath(__file__)) + os.sep
+input_file = file_path + 'day_03_input.txt'
 
 def day_03_prb_1():
 	logging.info('day 3, problem 1')
 	score = 0
-	with open('day_03_input.txt','r') as f:
+	with open(input_file,'r') as f:
 		rucksacks = f.readlines()
 		duplicates = []
 		priorities = string.ascii_lowercase + string.ascii_uppercase
 		priority_score = 0
-		print(priorities)
+		logging.debug(priorities)
 
 		for count, rucksack in enumerate(rucksacks):
 			mid = int(len(rucksack)/2)
@@ -31,20 +33,20 @@ def day_03_prb_1():
 			score = priorities.index(current_dups[0]) + 1
 			priority_score += score
 			
-			logging.info(f'Line {count}--- {current_dups[0]=}, {score=}')
+			logging.debug(f'Line {count}--- {current_dups[0]=}, {score=}')
 			
 	print(f'{priority_score=}')
 
 def day_03_prb_2():
 	logging.info('day 3, problem 2')
 	score = 0
-	with open('day_03_input.txt','r') as f:
+	with open(input_file,'r') as f:
 		rucksacks = f.read().splitlines()
 		# rucksacks = f.readlines()
 		duplicates = []
 		priorities = string.ascii_lowercase + string.ascii_uppercase
 		priority_score = 0
-		print(priorities)
+		logging.debug(priorities)
 
 		for i in range(0,len(rucksacks),3):
 			elf_1 = rucksacks[i]
@@ -54,20 +56,20 @@ def day_03_prb_2():
 			dups_pass2 = ''
 			badge = ''
 			
-			logging.info(f'Group: {i/3}')
+			logging.debug(f'Group: {i/3}')
 			
 			for item in elf_1:
 				if item in elf_2 and item not in dups_pass1:
 					dups_pass1 += item
-			logging.info(f'\t{dups_pass1=}')
+			logging.debug(f'\t{dups_pass1=}')
 			for item in dups_pass1:
 				if item in elf_3 and badge == '':
 					badge = item
-			logging.info(f'\t{dups_pass2=}')	
-			logging.info(f'\t{badge=}')
+			logging.debug(f'\t{dups_pass2=}')	
+			logging.debug(f'\t{badge=}')
 					
 			score = priorities.index(badge) + 1
-			logging.info(f'\t{score=}')
+			logging.debug(f'\t{score=}')
 			priority_score += score
 			
 			# logging.info(f'Group {i/3}--- {dups_pass1=}, {badge=}')
@@ -76,5 +78,5 @@ def day_03_prb_2():
 
 
 if __name__ == '__main__':
-	# day_03_prb_1()
-	day_03_prb_2()
+	day_03_prb_1() # Answer = 7742
+	day_03_prb_2() # Answer = 2276

@@ -1,20 +1,17 @@
 import os
-import logging
+
 import re
 from math import floor
+import logging
+
 logging.basicConfig(level=logging.DEBUG)
+file_path = os.path.dirname(os.path.abspath(__file__)) + os.sep
+input_file = file_path + 'day_10_input.txt'
 
-'''
-INCORRECT Answers: 
--15600
--26320
-47500
-
-'''
 def day_10_prb_1():
     print('day 10, problem 1')
 
-    with open('day_10_input.txt','r') as f:
+    with open(input_file,'r') as f:
         data = f.read().splitlines()
 
         X = 1
@@ -66,7 +63,7 @@ def day_10_prb_2():
     crt = ''
     current_crt_row = '#' # starts with this symbol b/c X=1 for sprite location
 
-    with open('day_10_input.txt','r') as f:
+    with open(input_file,'r') as f:
         data = f.read().splitlines()
         command_index = 0
         increment = 0
@@ -131,8 +128,8 @@ def day_10_prb_2():
     print(crt)
 
 if __name__ == '__main__':
-	# day_10_prb_1()
-	day_10_prb_2()
+	day_10_prb_1() # Answer = 14240
+	day_10_prb_2() # Answer = PLULKBZH
 
 
 '''

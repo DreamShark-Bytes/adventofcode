@@ -2,7 +2,9 @@ import os
 import logging
 import re
 from collections import defaultdict
-# logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.INFO)
+file_path = os.path.dirname(os.path.abspath(__file__)) + os.sep
+input_file = file_path + 'day_05_input.txt'
 
 def get_stacks(cargo_line):
 	start = 1
@@ -13,9 +15,9 @@ def get_stacks(cargo_line):
 	return output
 	
 def day_05_prb_1():
-	print('day 5, problem 1')
+	logging.info('day 5, problem 1')
 
-	with open('day_05_input.txt','r') as f:
+	with open(input_file,'r') as f:
 		data = f.read().splitlines()
 		# data = reader.readlines()
 	
@@ -60,10 +62,9 @@ def day_05_prb_1():
 	print(f'\t{final=}')
 
 def day_05_prb_2():
-	print(f'day 5, problem 2')
+	logging.info(f'day 5, problem 2')
 	
-	
-	with open('day_05_input.txt','r') as f:
+	with open(input_file,'r') as f:
 		data = f.read().splitlines()
 		# data = reader.readlines()
 	
@@ -108,5 +109,5 @@ def day_05_prb_2():
 
 
 if __name__ == '__main__':
-	day_05_prb_1()
-	day_05_prb_2()
+	day_05_prb_1() # Answer = TWSGQHNHL
+	day_05_prb_2() # Answer = JNRSCDWPP
