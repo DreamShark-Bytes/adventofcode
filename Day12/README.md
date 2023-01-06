@@ -58,3 +58,8 @@ This path reaches the goal in **`only 29`** steps, the fewest possible.
 **What is the fewest steps required to move starting from any square with elevation `a` to the location that should get the best signal?**
 
 # Comments & Observations
+While this one wasn't particularly difficult, my methods of debugging my code lead to an interesting visualization of the process. 
+
+It would be cool to learn how to better visualize/animate data like this. Main issues I ran into was that the terminal output was visually jittery (epilepsy trigger potential) and for larger visualizations (like day 14's sand problem), it can't display accurately.
+
+![shortest path visualization](https://github.com/DreamShark-Bytes/adventofcode/blob/main/Day12/PathFinding_2_small.gif?raw=true)
