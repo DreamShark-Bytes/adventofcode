@@ -2,7 +2,7 @@ import os
 import logging
 import time
 import re
-# logging.basicConfig(level=logging.DEBUG)
+
 file_path = os.path.dirname(os.path.abspath(__file__)) + os.sep
 input_file = file_path + 'day_01_input.txt'
 padding_size_large = 100
