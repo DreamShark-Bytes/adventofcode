@@ -62,4 +62,4 @@ While this one wasn't particularly difficult, my methods of debugging my code le
 
 It would be cool to learn how to better visualize/animate data like this. Main issues I ran into was that the terminal output was visually jittery (epilepsy trigger potential) and for larger visualizations (like day 14's sand problem), it can't display accurately.
 
-![shortest path visualization](https://github.com/DreamShark-Bytes/adventofcode/blob/main/Day12/PathFinding_2_small.gif?raw=true)
+![shortest path visualization](PathFinding_2_small.gif?raw=true)
