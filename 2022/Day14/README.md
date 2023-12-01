@@ -164,4 +164,4 @@ Using your scan, simulate the falling sand until the source of the sand becomes 
 - I had to completely redo the grid system I made from Part 1 over to Part 2 since the grid expanded past the original rock-layout
 - Might have been able to speed up Part 2 if I still had a grid-representing-rocks-and-settled-sand and just expand it's rows on either end. But I don't have time and must move on! lol
 
-![large sand bottom](https://github.com/DreamShark-Bytes/adventofcode/blob/main/Day14/Part2.png?raw=true)
+![large sand bottom](Part2.png?raw=true)
