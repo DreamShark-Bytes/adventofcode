@@ -30,4 +30,4 @@ During the 25 days, I managed to mostly keep up with the pace of the daily relea
 The main takeaway that will help me be prepared for next year's Advent of Code: Have ALL of my Christmas shopping done and plans made before December.
 
 So by the end, I got 31 stars out of 50. I'm still proud of the work I managed to get done, and can feel the benefits from the exercise! I'm excited to try and finish these problems at my leisure. 
-![Advent Of Code Star Progress](https://github.com/DreamShark-Bytes/adventofcode/blob/main/CalendarPeriod_Results.png?raw=true)
+![Advent Of Code Star Progress](https://github.com/DreamShark-Bytes/adventofcode/blob/main/2022/CalendarPeriod_Results.png?raw=true)
