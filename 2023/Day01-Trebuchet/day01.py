@@ -4,7 +4,7 @@ import time
 import re
 
 file_path = os.path.dirname(os.path.abspath(__file__)) + os.sep
-input_file = file_path + 'day_01_input.txt'
+input_file = file_path + 'input.txt'
 padding_size_large = 100
 padding_size_medium = 45
 padding_char = '-'
