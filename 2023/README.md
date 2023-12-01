@@ -1,7 +1,7 @@
 Another year, another AdeventOfCode. 
 Excited, and nervous for this one, but coming in overall more confident than last year I think. Even though I know how hard and time consuming the problems can be, I know a little better what I'm getting into. 
 
-#What I hope to gain
+# What I hope to gain
 - more exerpience using Git
 	- last year it was hard to setup and maintain. I loved the Markdown conversions of the problem, but it was annoying to do. That will certainly NOT be a requirement for each Day this time. I will add comments & thoughts on the day's problems though in journal style entries. 
 	- I still plan on using my lil'RaspberryPi at the start like I did last time, but the lack of IDE functions really hit me hard. Hoping to look into alternatives so I can code on the go (my iPad). 
