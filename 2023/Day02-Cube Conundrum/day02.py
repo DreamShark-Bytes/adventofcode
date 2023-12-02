@@ -15,13 +15,7 @@ class cube:
 		self.limit = limit
 		self.count = count
 
-def prb(prb_num,lines_to_debug = 0):
-	
-	limits = [
-		cube('red', 12),
-		cube('green', 13),
-		cube('blue', 14),
-	]
+def color_cube_game(problem_num,lines_to_debug = 0):
 	limits = {
 		'red':12,
 		'green':13,
@@ -38,8 +32,9 @@ def prb(prb_num,lines_to_debug = 0):
 		lines_read += 1
 		
 		pull_results = []
-		# cleaned_line = re.sub(r'[^a-zA-Z :;0-9]', '', line)
+
 		max_colors = {key:0 for key in limits.keys()}
+		
 		game_id = int(game_played.split(':')[0][5:])
 		pulls = game_played.split(':')[1].split(';')
 		id_pass = True
@@ -51,19 +46,19 @@ def prb(prb_num,lines_to_debug = 0):
 				view = view.split()
 				amount = int(view[0])
 				color = view[1]
+				
 				if amount > max_colors[color]:
 					max_colors[color] = amount
 				if amount > limits[color]:
 					id_pass=False
 					pull_results[-1] = False
-			if not id_pass: break
-		game_power = 0
+		game_power = 1
+		for value in max_colors.values(): game_power *= value
+		total_power += game_power
+		
 		if id_pass:
 			passing_game_id_count +=  game_id
-			game_power = 1
-			for value in max_colors.values(): game_power *= value
-			total_power += game_power
-
+		
 		if lines_read <= lines_to_debug:
 			logging.debug(f'{game_played}')
 			logging.debug('\t' + str(pull_results))
@@ -81,9 +76,9 @@ def prb(prb_num,lines_to_debug = 0):
 def handler():
 	logging.getLogger().setLevel(logging.DEBUG)
 	logging.info(' day 2, problem 1 '.center(padding_size_large,padding_char))
-	prb(1) # Answer: 2331
-
+	color_cube_game(problem_num=1) # Answer: 2331
+	
 	logging.info(' day 2, problem 2 '.center(padding_size_large,padding_char))
-	prb(2,20)
+	color_cube_game(problem_num=2) # Answer: 71585
 
 handler()

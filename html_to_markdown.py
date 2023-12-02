@@ -4,6 +4,7 @@ TODO:
 - try getting active user session using COOKIES
 - read first <article> as Title<h1>, and manually add a "Problem 1" <h2>
     - strip '-' and ' '
+- remove spaces from folder name
 -------------------------------------
 To Run: 
     - Get HTML of Problem's Page, regardless of browser the steps 
