@@ -37,14 +37,14 @@ def re_list_dir(folder_path='.', pattern=r'.*'):
     pattern_regex = re.compile(pattern)
 
     # Iterate through all files in the folder
-    for dirs in os.listdir(folder_path): #os.walk(folder_path):
-        for name in dirs:
-            # Check if the file name matches the pattern
-            if pattern_regex.search(name):
-                file_list.append(os.path.join(folder_path, name))
+    for dir in os.listdir(folder_path): 
+        # Check if the file name matches the pattern
+        if pattern_regex.search(dir):
+            file_list.append(dir) # os.path.join(folder_path, dir))
 
     return file_list
-output_folder = re_list_dir(pattern='^[a-zA-Z]?(D|d)ay[a-zA-Z]?0?' + day + '*')
+print(f'{day=}')
+output_folder = re_list_dir(file_path + year_sub_folder, r'^[^a-zA-Z]*(D|d)ay[^a-zA-Z0-9]?0?' + day)
 print(output_folder)
 quit()
 # Input ------------------------------------------------------------
@@ -81,7 +81,7 @@ if not day_correct:
 
 # Does the Folder already exist -----------------------------------------
 day = day.zfill(2)
-output_folder = glob.glob(file_path + year_sub_folder + os.sep + '(D|d)ay' + day + '*')
+output_folder = glob.glob(file_path + year_sub_folder + '(D|d)ay' + day + '*')
 if output_folder: 
     output_folder = output_folder[0]
 else:
