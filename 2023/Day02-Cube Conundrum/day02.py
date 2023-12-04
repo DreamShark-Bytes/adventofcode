@@ -68,9 +68,9 @@ def color_cube_game(problem_num,lines_to_debug = 0):
 				logging.debug('\t\t' + f'{max_colors=}')
 				logging.debug('\t\t' + f'{game_power=} :: {total_power=}')
 	
-	if prb_num == 1:
+	if problem_num == 1:
 		logging.info(f'ANSWER: {passing_game_id_count=}')
-	elif prb_num == 2:
+	elif problem_num == 2:
 		logging.info(f'ANSWER: {total_power=}')
 
 def handler():

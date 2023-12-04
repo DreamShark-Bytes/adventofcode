@@ -1,0 +1,4 @@
+## Comments
+12/3/2023 - finally taking the time to properly learn git branches so I'm not innundating the main with updates for any willynilly change for reasons like "I'm going to a coffee shop and going to work on my iPad instead of my computer and need the code updated to work from". This has been a long time coming - and since I don't collab code in anyway at work I've not had to learn this yet. 
+
+Today took MUCh longer than I thought it would. Re-learning to debug quickly and pivot when a solution I was playing with is getting too complicated. Hopefully I'll be able to visualize these solution alternatives quicker and not waste as much time trying to code these.
