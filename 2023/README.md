@@ -21,13 +21,9 @@ Discovered that people were making AI Art
 	- by allowing myself to go on tagents at the start of the project (html to markdown thing)
 
 ## Current Progress
-<<<<<<< HEAD
-![current progress](./current_progress.png)
-=======
 ![current progress](./current_progress.png)
 
 ## AI Art of the event
 source is Microsoft Bing
 
 ![test](./AdventOfCode_2023.jpg)
->>>>>>> problem-wip
