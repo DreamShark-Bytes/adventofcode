@@ -71,3 +71,6 @@ In this example, the calibration values are `29`, `83`, `13`, `24`, `42`, `14`, 
 It was fun knocking the rust off my coding and git skills. 
 For Problem 2, I was programming the way I wanted to, but realized I wanted to look up other ways I could do this using Regex. Sadly that turned out not be the answer b/c of the possibility of overlapping words, such as "twone" should be converted to "21".
 
+## AI Art of the Scenario
+Source: https://www.reddit.com/r/adventofcode/comments/1897f8g/2023_day_1_lets_prepare_the_trebuchet/
+![ai art-advent of code-2023-day 1-trbuchet](./2023-day-1-lets-prepare-the-trebuchet-v0-z0ppa7evsw3c1.jpg)

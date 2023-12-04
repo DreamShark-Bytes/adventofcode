@@ -1,6 +1,8 @@
 Another year, another AdeventOfCode. 
 Excited, and nervous for this one, but coming in overall more confident than last year I think. Even though I know how hard and time consuming the problems can be, I know a little better what I'm getting into. 
 
+Discovered that people were making AI Art
+
 # What I hope to gain
 - more exerpience using Git
 	- last year it was hard to setup and maintain. I loved the Markdown conversions of the problem, but it was annoying to do. That will certainly NOT be a requirement for each Day this time. I will add comments & thoughts on the day's problems though in journal style entries. 
@@ -17,4 +19,6 @@ Excited, and nervous for this one, but coming in overall more confident than las
 - reducing risk of burnout: 
 	- frequent breaks. 
 	- by allowing myself to go on tagents at the start of the project (html to markdown thing)
-- allowed myself to go overboard at the start of the event and created an automated way to 
+
+## Current Progress
+![current progress](./current_progress.png)
