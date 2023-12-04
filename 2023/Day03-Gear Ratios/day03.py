@@ -18,24 +18,7 @@ def distance(pos1,pos2):
 		r += (pos1[d] - pos2[d])**2
 	return math.sqrt(r)
 
-class symbol_info:
-	def __init__(self,loc,char,ratio=0,part_count=0):
-		self.loc = loc
-		self.char = char
-		self.ratio = ratio
-		self.part_count = part_count
-
-class loc:
-	def __init__(self,x,y):
-		self.x = x
-		self.y = y
-
 def find_symbols(lines, looking_for=lambda x: x,lines_to_debug = 0):
-	# Items in list:
-	# 	0: location [x, start_y, end_y]
-	#	1: symbol
-	#	2: gear ratio
-	#	3: nearby number count
 	found_symbols = [] 
 	gear_ratio_map = []
 	for x in range(len(lines)):
@@ -47,7 +30,6 @@ def find_symbols(lines, looking_for=lambda x: x,lines_to_debug = 0):
 			if looking_for(char):
 				if x <= lines_to_debug:
 					logging.debug(f'Line {x}: {char} at column {y}')
-				# found_symbols.append(symbol_info([x,y], char))
 				found_symbols.append([x,y])
 
 				gear_ratio_map[x][y] = [1,0]
