@@ -37,8 +37,7 @@ def scratch_card(lines_to_debug=0):
 		c += 1
 		if c <= lines_to_debug:
 			logging.debug('\t' + f'{card_points=}, {prb1_points=}, {found_numbers=}')
-			logging.debug('\t' + f'copies of current card = {card_copies}')
-			logging.debug('\t' + f'winning nums found = {len(found_numbers)}')
+			logging.debug('\t' + f'copies subsequent cards = {card_copies}')
 			
 	print(f'{scored_cards[:5]=}')
 
@@ -63,14 +62,10 @@ def scratch_card(lines_to_debug=0):
 		prb2_count += current_card_count
 	
 	logging.info(' day 4, problem 1 '.center(padding_size_large,padding_char))
-	logging.info(f'Answer: {prb1_points}')
+	logging.info(f'Answer: {prb1_points}') # Answer: 21568
 
 	logging.info(' day 4, problem 2 '.center(padding_size_large,padding_char))
-	logging.info(f'Answer: {prb2_count}')
-	'''
-	Answers
-		- 
-	'''
+	logging.info(f'Answer: {prb2_count}') # Answer: 11827296
  
 logging.getLogger().setLevel(logging.DEBUG)
-scratch_card(lines_to_debug=196)
+scratch_card()

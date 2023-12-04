@@ -22,3 +22,8 @@ Discovered that people were making AI Art
 
 ## Current Progress
 ![current progress](./current_progress.png)
+
+## AI Art of the event
+source is Microsoft Bing
+
+![test](./AdventOfCode_2023.jpg)
