@@ -26,4 +26,8 @@ Discovered that people were making AI Art
 ## AI Art of the event
 source is Microsoft Bing
 
+<<<<<<< HEAD
 ![test](./AdventOfCode_2023.jpg)
+=======
+![test](./AdventOfCode_2023.jpg)
+>>>>>>> problem-wip

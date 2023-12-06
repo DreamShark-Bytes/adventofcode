@@ -38,8 +38,12 @@ def scratch_card(lines_to_debug=0):
 		if c <= lines_to_debug:
 			logging.debug('\t' + f'{card_points=}, {prb1_points=}, {found_numbers=}')
 <<<<<<< HEAD
+<<<<<<< HEAD
 			logging.debug('\t' + f'copies of current card = {card_copies}')
 			logging.debug('\t' + f'winning nums found = {len(found_numbers)}')
+=======
+			logging.debug('\t' + f'copies subsequent cards = {card_copies}')
+>>>>>>> problem-wip
 =======
 			logging.debug('\t' + f'copies subsequent cards = {card_copies}')
 >>>>>>> problem-wip
@@ -68,6 +72,7 @@ def scratch_card(lines_to_debug=0):
 	
 	logging.info(' day 4, problem 1 '.center(padding_size_large,padding_char))
 <<<<<<< HEAD
+<<<<<<< HEAD
 	logging.info(f'Answer: {prb1_points}')
 
 	logging.info(' day 4, problem 2 '.center(padding_size_large,padding_char))
@@ -80,11 +85,17 @@ def scratch_card(lines_to_debug=0):
 logging.getLogger().setLevel(logging.DEBUG)
 scratch_card(lines_to_debug=196)
 =======
+=======
+>>>>>>> problem-wip
 	logging.info(f'Answer: {prb1_points}') # Answer: 21568
 
 	logging.info(' day 4, problem 2 '.center(padding_size_large,padding_char))
 	logging.info(f'Answer: {prb2_count}') # Answer: 11827296
  
 logging.getLogger().setLevel(logging.DEBUG)
+<<<<<<< HEAD
+scratch_card()
+>>>>>>> problem-wip
+=======
 scratch_card()
 >>>>>>> problem-wip
