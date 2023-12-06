@@ -19,6 +19,9 @@ Discovered that people were making AI Art
 - reducing risk of burnout: 
 	- frequent breaks. 
 	- by allowing myself to go on tagents at the start of the project (html to markdown thing)
+- Consider the time and effort put into a solution given my resources (time) and the "reward" of putting in the extra work. Aka how often would this code be used? How much time does it save? 
+	- This lesson isn't something I'm aiming to apply to all of these AoC learning situations, but I will have to for some of them as time-is-a-factor. 
+	- Something I love about AoC. Get it done well, if I have the time, otherwise, just make sure I get it done. 
 
 ## Current Progress
 ![current progress](./current_progress.png)
